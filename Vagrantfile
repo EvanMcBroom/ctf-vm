@@ -15,5 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     h.differencing_disk = true
   end
 
+  config.vm.provision :shell, :path => "provision.sh", :privileged => false
+
   config.vm.synced_folder '.', '/vagrant', type: 'smb', mount_options: ['vers=3.0']
 end
