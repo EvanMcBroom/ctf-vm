@@ -83,6 +83,7 @@ git clone https://github.com/zachriggle/pwndbg
 pushd pwndbg
 sudo pip3 install pycparser
 ./setup.sh
+echo "export LC_ALL=en_US.UTF-8 PYTHONIOENCODING=UTF-8" | tee -a ~/.bashrc ~/.zshrc
 popd
 
 # QEMU and other things for compiling, running, and debugging MIPS/ARM
