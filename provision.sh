@@ -7,6 +7,7 @@ sudo apt-get -y upgrade
 sudo apt-get -y install binutils-arm-linux-gnueabi
 sudo apt-get -y install build-essential
 sudo apt-get -y install htop
+sudo apt-get -y install nasm
 sudo apt-get -y install python-pip python3-pip
 sudo apt-get -y install unzip unrar
 
