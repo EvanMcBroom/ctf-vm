@@ -2,7 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-This is the VM for playing CTFs on Windows.
+This is a VM for playing CTFs on Windows.
 The VM uses Hyper-V as its hypervisor and is provisioned by Vagrant.
 If your host is instead Linux or OSX, checkout [EpicTreasure](https://github.com/ctfhacker/EpicTreasure) or [pwnvm](https://github.com/OpenToAllCTF/pwnvm).  
 
