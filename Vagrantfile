@@ -6,13 +6,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.username = "vagrant"
   config.ssh.forward_agent = true
 
-  config.vm.box = "generic/ubuntu1804"
+  config.vm.box = "generic/debian12"
 
   config.vm.provider "hyperv" do |h|
     h.vmname = "ctf"
     h.memory = "2048"
     h.enable_virtualization_extensions = true
-    h.differencing_disk = true
+    h.linked_clone = true
   end
 
   config.vm.provision :shell, :path => "provision.sh", :privileged => false
