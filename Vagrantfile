@@ -15,6 +15,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     h.linked_clone = true
   end
 
+  config.vm.provider "virtualbox" do |v|
+    v.name = "ctf"
+    v.memory = "2048"
+    v.linked_clone = true
+    v.gui = true
+  end
+  
+  config.vm.provider "vmware_desktop" do |v|
+    v.vmx["displayname"] = "ctf"
+    v.vmx["memsize"] = "2048"
+    v.gui = true
+  end
+
   config.vm.provision :shell, :path => "provision.sh", :privileged => false
 
   config.vm.synced_folder '.', '/vagrant', type: 'smb', mount_options: ['vers=3.0']
